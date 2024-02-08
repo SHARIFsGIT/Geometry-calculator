@@ -1,29 +1,43 @@
 function calcTriangleArea(){
-    const baseField = document.getElementById('triangle-base');
-    const baseValueText = baseField.value;
-    const baseValue = parseFloat(baseValueText);
-    
-    const heightField = document.getElementById('triangle-height');
-    const heightValueText = heightField.value;
-    const heightValue = parseFloat(heightValueText);
+    const base = getInputValue('triangle-base');
+    const height = getInputValue('triangle-height');
 
-    const area = 0.5 * baseValue * heightValue;
-
-    const areaSpan = document.getElementById('triangle-result');
-    areaSpan.innerText = area;
+    const area = 0.5 * base * height;
+    setElementInnerText('triangle-result', area);
 }
 
 function calcRectangleArea(){
-    const widthField = document.getElementById('rectangle-width');
-    const widthValueText = widthField.value;
-    const widthValue = parseFloat(widthValueText);
-    
-    const lengthField = document.getElementById('rectangle-length');
-    const lengthValueText = lengthField.value;
-    const lengthValue = parseFloat(lengthValueText);
+    const width = getInputValue('rectangle-width');
+    const length = getInputValue('rectangle-length');
 
-    const area = widthValue * lengthValue;
+    const area = width * length;
+    setElementInnerText('rectangle-result', area);
+}
 
-    const areaSpan = document.getElementById('rectangle-result');
-    areaSpan.innerText = area;
+function calcParallelogramArea(){
+    const base = getInputValue('parallelogram-base');
+    const height = getInputValue('parallelogram-height');
+
+    const area = base * height;
+    setElementInnerText('parallelogram-result', area);
+}
+
+function calcEllipseArea(){
+    const a = getInputValue('ellipse-a');
+    const b = getInputValue('ellipse-b');
+
+    const area = 3.1416 * a * b;
+    setElementInnerText('ellipse-result', area);
+}
+
+function getInputValue(fieldId){
+    const inputField = document.getElementById(fieldId);
+    const inputValueText = inputField.value;
+    const value = parseFloat(inputValueText);
+    return value;
+}
+
+function setElementInnerText(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
 }

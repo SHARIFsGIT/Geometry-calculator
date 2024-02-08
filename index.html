@@ -24,10 +24,10 @@
                       <h2 class="card-title">Triangle</h2>
                       <p>Area (A) = 0.5 X b X h</p>
                       <p>
-                        <input type="text" class="border text-xl w-24 px-2 bg-gray-200" placeholder="base" id="triangle-base">
+                        <input type="text" class="border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="base" id="triangle-base">
                         <span class="ml-2">cm</span>
 
-                        <input type="text" class="ml-4 border text-xl w-24 px-2 bg-gray-200" placeholder="height" id="triangle-height">
+                        <input type="text" class="ml-4 border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="height" id="triangle-height">
                         <span class="ml-2">cm</span>
                       </p>
 
@@ -47,10 +47,10 @@
                       <h2 class="card-title">Rectangle</h2>
                       <p>Area (A) = w X l</p>
                       <p>
-                        <input type="text" class="border text-xl w-24 px-2 bg-gray-200" placeholder="width" id="rectangle-width">
+                        <input type="text" class="border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="width" id="rectangle-width">
                         <span class="ml-2">cm</span>
 
-                        <input type="text" class="ml-4 border text-xl w-24 px-2 bg-gray-200" placeholder="length" id="rectangle-length">
+                        <input type="text" class="ml-4 border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="length" id="rectangle-length">
                         <span class="ml-2">cm</span>
                       </p>
 
@@ -65,15 +65,50 @@
                 </div>
                 <!-- third card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                  <figure><img src="images/parallelogram.png" alt="" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Parallelogram</h2>
+                    <p>Area (A) = b X h</p>
+                    <p>
+                      <input type="text" class="border text-xl w-24 px-2  bg-gray-200 rounded-md " placeholder="base" id="parallelogram-base">
+                      <span class="ml-2">cm</span>
+
+                      <input type="text" class="ml-4 border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="height" id="parallelogram-height">
+                      <span class="ml-2">cm</span>
+                    </p>
+
+                    <p class="text-2xl">
+                      Area: <span id="parallelogram-result">0</span> cm<sup>2</sup>
+                    </p>
+
+                    <div class="card-actions">
+                      <button onclick="calcParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
                     </div>
-                </div>
+                  </div>
+              </div>
+                <!-- fourth card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                  <figure><img src="images/ellipse.png" alt="" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p>Area (A) = π X a X b</p>
+                    <p>
+                      <input type="text" class="border text-xl w-24 px-2  bg-gray-200 rounded-md " placeholder="a" id="ellipse-a">
+                      <span class="ml-2">cm</span>
+
+                      <input type="text" class="ml-4 border text-xl w-24 px-2  bg-gray-200 rounded-md" placeholder="b" id="ellipse-b">
+                      <span class="ml-2">cm</span>
+                    </p>
+
+                    <p class="text-2xl">
+                      Area: <span id="ellipse-result">0</span> cm<sup>2</sup>
+                    </p>
+
+                    <div class="card-actions">
+                      <button onclick="calcEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+                    </div>
+                  </div>
+              </div>
             </div>
             <!-- area calculator -->
             <div class="w-[400px]">
