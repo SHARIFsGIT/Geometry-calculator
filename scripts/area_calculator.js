@@ -2,6 +2,11 @@ function calcTriangleArea(){
     const base = getInputValue('triangle-base');
     const height = getInputValue('triangle-height');
 
+    if (isNaN(base) || isNaN(height)){
+        alert('Please enter a valid number');
+        return;
+    }
+
     const area = 0.5 * base * height;
     setElementInnerText('triangle-result', area);
 }
@@ -9,6 +14,11 @@ function calcTriangleArea(){
 function calcRectangleArea(){
     const width = getInputValue('rectangle-width');
     const length = getInputValue('rectangle-length');
+
+    if (isNaN(width) || isNaN(length)){
+        alert('Please enter a valid number');
+        return;
+    }
 
     const area = width * length;
     setElementInnerText('rectangle-result', area);
@@ -18,6 +28,11 @@ function calcParallelogramArea(){
     const base = getInputValue('parallelogram-base');
     const height = getInputValue('parallelogram-height');
 
+    if (isNaN(base) || isNaN(height)){
+        alert('Please enter a valid number');
+        return;
+    }
+
     const area = base * height;
     setElementInnerText('parallelogram-result', area);
 }
@@ -25,6 +40,11 @@ function calcParallelogramArea(){
 function calcEllipseArea(){
     const a = getInputValue('ellipse-a');
     const b = getInputValue('ellipse-b');
+
+    if (isNaN(a) || isNaN(b)){
+        alert('Please enter a valid number');
+        return;
+    }
 
     const area = 3.1416 * a * b;
     setElementInnerText('ellipse-result', area);
