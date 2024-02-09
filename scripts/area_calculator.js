@@ -9,6 +9,8 @@ function calcTriangleArea(){
 
     const area = 0.5 * base * height;
     setElementInnerText('triangle-result', area);
+
+    addToCalculation('Triangle', area);
 }
 
 function calcRectangleArea(){
@@ -22,6 +24,8 @@ function calcRectangleArea(){
 
     const area = width * length;
     setElementInnerText('rectangle-result', area);
+
+    addToCalculation('Rectangle', area);
 }
 
 function calcParallelogramArea(){
@@ -35,6 +39,8 @@ function calcParallelogramArea(){
 
     const area = base * height;
     setElementInnerText('parallelogram-result', area);
+
+    addToCalculation('Parallelogram', area);
 }
 
 function calcEllipseArea(){
@@ -48,6 +54,8 @@ function calcEllipseArea(){
 
     const area = 3.1416 * a * b;
     setElementInnerText('ellipse-result', area);
+
+    addToCalculation('Ellipse', area);
 }
 
 function getInputValue(fieldId){
@@ -60,4 +68,18 @@ function getInputValue(fieldId){
 function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
+}
+
+function addToCalculation(shapeType, areaResult){
+    const calculationEntry = document.getElementById('calculation-entry');
+
+    const liCount = calculationEntry.childElementCount;
+
+    const create = document.createElement('p');
+    // create.innerHTML = shapeType + ' ' + areaResult;
+    create.classList.add('my-3');
+    create.innerHTML = `${liCount + 1}. ${shapeType}: ${areaResult} cm<sup>2</sup>`
+    // <button class="btn btn-sm btn-success">Button</button>
+
+    calculationEntry.appendChild(create);
 }
